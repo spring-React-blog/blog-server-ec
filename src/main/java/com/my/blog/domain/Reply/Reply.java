@@ -1,5 +1,7 @@
-package com.my.blog.domain.dto;
+package com.my.blog.domain.Reply;
 
+import com.my.blog.domain.Member.Member;
+import com.my.blog.domain.Post.Board;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
