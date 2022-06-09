@@ -29,17 +29,17 @@ public class Board {
     @Column(name = "open_status")
     private boolean openStatus;
 
-    @Column(name = "board_count_id")
-    @OneToOne(mappedBy = "member_id")
+    @JoinColumn(name = "Members")
+    @OneToOne
     private Member member;
 
-    @Column(name = "board_count_id")
-    @OneToOne(mappedBy = "board_count_id")
-    private Board boardCountId;
+    @JoinColumn(name = "BoardCounts")
+    @OneToOne
+    private BoardCount boardCount;
 
-    @Column(name = "category_id")
-    @OneToOne(mappedBy = "category_id")
-    private Category categoryId;
+    @JoinColumn(name = "Categories")
+    @OneToOne
+    private Category category;
 
 
 }

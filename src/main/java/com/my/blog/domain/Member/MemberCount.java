@@ -12,6 +12,7 @@ import javax.persistence.*;
 public class MemberCount {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_count_id")
     private int memberCountId;
 
@@ -23,9 +24,4 @@ public class MemberCount {
 
     @Column(name = "board_count")
     private int boardCount;
-
-    @OneToOne(mappedBy = "memberCountId")
-    private Member member;
-
-
 }

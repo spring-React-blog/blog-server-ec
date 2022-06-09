@@ -26,11 +26,11 @@ public class TempBoard {
     @Column(name = "board_img")
     private String boardImg;
 
-    @Column(name = "category_id")
-    @OneToOne(mappedBy = "category_id")
+    @JoinColumn(name = "Categories")
+    @OneToOne
     private Category category;
 
-    @Column(name = "member_id")
-    @OneToOne(mappedBy = "member_id")
+    @JoinColumn(name = "Members")
+    @OneToOne
     private Member member;
 }

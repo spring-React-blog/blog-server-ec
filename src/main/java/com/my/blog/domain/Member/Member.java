@@ -1,5 +1,6 @@
 package com.my.blog.domain.Member;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -10,7 +11,7 @@ import java.util.Date;
 @Getter
 @NoArgsConstructor
 @Entity
-@Table(name = "MEMBERS")
+@Table(name = "Members")
 public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,7 +39,20 @@ public class Member {
     private Timestamp leaveTime;
 
     @OneToOne
-    @JoinColumn(name = "member_count_id")
-    private MemberCount memberCountId;
+    @JoinColumn(name = "MemberCounts")
+    private MemberCount memberCount;
 
+
+    @Builder
+    public Member(String userEmail, String userPassword, String userName, String userNickname,
+                  Date userBirth, Enum role, Timestamp leaveTime, MemberCount memberCount) {
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        this.userName = userName;
+        this.userNickname = userNickname;
+        this.userBirth = userBirth;
+        this.role = role;
+        this.leaveTime = leaveTime;
+        this.memberCount = memberCount;
+    }
 }

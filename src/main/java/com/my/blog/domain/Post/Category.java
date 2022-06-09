@@ -20,7 +20,4 @@ public class Category {
     @Column(name = "category_name")
     private String categoryName;
 
-    @Column(name = "member_id")
-    @OneToOne(mappedBy = "member_id")
-    private Member memberId;
 }

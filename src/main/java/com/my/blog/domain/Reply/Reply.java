@@ -20,11 +20,11 @@ public class Reply {
     @Column(name = "reply_content")
     private String replayContent;
 
-    @Column(name = "board_id")
-    @OneToOne(mappedBy = "board_id")
-    private Board boardId;
+    @JoinColumn(name = "Boards")
+    @OneToOne
+    private Board board;
 
-    @Column(name = "member_id")
-    @OneToOne(mappedBy = "member_count_id")
-    private Member memberId;
+    @JoinColumn(name = "Members")
+    @OneToOne
+    private Member member;
 }
