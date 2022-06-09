@@ -1,5 +1,6 @@
 package com.my.blog.domain.Member;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -24,4 +25,11 @@ public class MemberCount {
 
     @Column(name = "board_count")
     private int boardCount;
+
+    @Builder
+    public MemberCount(int followerCount, int followingCount, int boardCount) {
+        this.followerCount = followerCount;
+        this.followingCount = followingCount;
+        this.boardCount = boardCount;
+    }
 }

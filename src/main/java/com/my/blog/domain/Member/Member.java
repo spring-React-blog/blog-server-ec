@@ -38,7 +38,8 @@ public class Member {
     @Column(name = "delete_time")
     private Timestamp leaveTime;
 
-    @OneToOne
+    // 자식 개체를 영속시키는 영속성 전이
+    @OneToOne(cascade=CascadeType.ALL)
     @JoinColumn(name = "MemberCounts")
     private MemberCount memberCount;
 
