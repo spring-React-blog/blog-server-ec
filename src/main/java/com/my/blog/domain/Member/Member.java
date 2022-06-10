@@ -56,4 +56,19 @@ public class Member {
         this.leaveTime = leaveTime;
         this.memberCount = memberCount;
     }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "id=" + id +
+                ", userEmail='" + userEmail + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                ", userName='" + userName + '\'' +
+                ", userNickname='" + userNickname + '\'' +
+                ", userBirth=" + userBirth +
+                ", role=" + role +
+                ", leaveTime=" + leaveTime +
+                ", memberCount=" + memberCount.toString() +
+                '}';
+    }
 }
