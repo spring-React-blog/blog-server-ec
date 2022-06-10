@@ -1,6 +1,8 @@
 package com.my.blog.domain.Post;
 
 import com.my.blog.domain.Member.Member;
+import com.my.blog.global.util.BaseTimeEntity;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -10,7 +12,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "Boards")
-public class Board {
+public class Board extends BaseTimeEntity {
 
     @Id
     @Column(name = "board_id")
@@ -41,5 +43,15 @@ public class Board {
     @OneToOne
     private Category category;
 
+    @Builder
+    public Board(String title, String content, String boardImg, boolean openstatus, Member member, BoardCount boardCount, Category category) {
+        this.title = title;
+        this.content = content;
+        this.boardImg = boardImg;
+        this.openStatus = openstatus;
+        this.member = member;
+        this.boardCount = boardCount;
+        this.category = category;
+    }
 
 }
