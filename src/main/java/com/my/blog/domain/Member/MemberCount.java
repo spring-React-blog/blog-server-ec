@@ -33,13 +33,4 @@ public class MemberCount {
         this.boardCount = boardCount;
     }
 
-    @Override
-    public String toString() {
-        return "MemberCount{" +
-                "memberCountId=" + memberCountId +
-                ", followerCount=" + followerCount +
-                ", followingCount=" + followingCount +
-                ", boardCount=" + boardCount +
-                '}';
-    }
 }
