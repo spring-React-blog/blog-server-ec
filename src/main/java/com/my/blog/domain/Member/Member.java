@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
@@ -36,7 +36,7 @@ public class Member {
     private Enum role;
 
     @Column(name = "delete_time")
-    private Timestamp leaveTime;
+    private LocalDateTime leaveTime;
 
     // 자식 개체를 영속시키는 영속성 전이
     @OneToOne(cascade=CascadeType.ALL)
@@ -46,7 +46,7 @@ public class Member {
 
     @Builder
     public Member(String userEmail, String userPassword, String userName, String userNickname,
-                  Date userBirth, Enum role, Timestamp leaveTime, MemberCount memberCount) {
+                  Date userBirth, Enum role, LocalDateTime leaveTime, MemberCount memberCount) {
         this.userEmail = userEmail;
         this.userPassword = userPassword;
         this.userName = userName;
