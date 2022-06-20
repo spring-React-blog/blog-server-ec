@@ -1,7 +1,7 @@
 package com.my.blog.domain.service;
 
-import com.my.blog.domain.dto.Member;
-import com.my.blog.domain.repository.MemberRepository;
+import com.my.blog.domain.Member.domain.dao.MemberRepository;
+import com.my.blog.domain.Member.domain.vo.Member;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ class MemberServiceTest {
     @Test
     void save() {
         Member member = Member.builder()
-            .username("TEST")
+            .userName("TEST")
             .build();
         Member insertMember = memberRepository.save(member);
         assertEquals(member, insertMember);
@@ -35,7 +35,7 @@ class MemberServiceTest {
     @Test
     void findById() {
         Member member = Member.builder()
-                .username("USERNAME")
+                .userName("USERNAME")
                 .build();
         Member insertMember = memberRepository.save(member);
         Optional<Member> findMember = memberRepository.findById(insertMember.getId());
