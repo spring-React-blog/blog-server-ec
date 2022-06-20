@@ -24,11 +24,10 @@ ext {
 }
 
 dependencies {
-    implementation group: 'org.springframework', name: 'spring-webmvc', version: '5.3.18'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
     // junit
     implementation 'junit:junit:4.13.1'
@@ -36,7 +35,7 @@ dependencies {
     // h2
     runtimeOnly 'com.h2database:h2'
 
-    // sequrity
+    // security
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
 
@@ -48,6 +47,10 @@ dependencies {
     // lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+
+    // security
+    implementation group: 'org.springframework', name: 'spring-core', version: '5.3.20'
+    implementation group: 'org.springframework', name: 'spring-context', version: '5.3.20'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
