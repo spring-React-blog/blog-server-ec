@@ -1,4 +1,4 @@
-package com.my.blog.domain.Follower;
+package com.my.blog.domain.Follower.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

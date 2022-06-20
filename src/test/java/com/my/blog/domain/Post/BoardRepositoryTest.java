@@ -1,8 +1,8 @@
 package com.my.blog.domain.Post;
 
 import com.my.blog.BlogServerEcApplication;
-import com.my.blog.domain.Member.Member;
-import com.my.blog.domain.Member.MemberCount;
+import com.my.blog.domain.Post.domain.dao.BoardRepository;
+import com.my.blog.domain.Post.dto.Board;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,10 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
 public class BoardRepositoryTest extends BlogServerEcApplication {

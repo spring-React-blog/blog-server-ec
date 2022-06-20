@@ -1,6 +1,6 @@
-package com.my.blog.domain.Post;
+package com.my.blog.domain.Post.domain.dao;
 
-import com.my.blog.domain.Member.Member;
+import com.my.blog.domain.Post.dto.Board;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BoardRepository extends JpaRepository<Board, Long> {

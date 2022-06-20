@@ -1,5 +1,7 @@
 package com.my.blog.domain.Member;
 
+import com.my.blog.domain.Member.domain.vo.Member;
+import com.my.blog.domain.Member.domain.dao.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

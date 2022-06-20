@@ -1,4 +1,4 @@
-package com.my.blog.domain.Post;
+package com.my.blog.domain.Post.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

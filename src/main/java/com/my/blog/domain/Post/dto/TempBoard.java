@@ -1,6 +1,7 @@
-package com.my.blog.domain.Post;
+package com.my.blog.domain.Post.dto;
 
-import com.my.blog.domain.Member.Member;
+import com.my.blog.domain.Member.domain.vo.Member;
+import com.my.blog.domain.Post.domain.vo.Category;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

@@ -1,6 +1,9 @@
 package com.my.blog.domain.Member;
 
 import com.my.blog.BlogServerEcApplication;
+import com.my.blog.domain.Member.domain.vo.Member;
+import com.my.blog.domain.Member.domain.dao.MemberRepository;
+import com.my.blog.domain.Member.dto.MemberCount;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +12,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
 public class MemberRepositoryTest extends BlogServerEcApplication {

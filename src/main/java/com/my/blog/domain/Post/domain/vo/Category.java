@@ -1,6 +1,5 @@
-package com.my.blog.domain.Post;
+package com.my.blog.domain.Post.domain.vo;
 
-import com.my.blog.domain.Member.Member;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

@@ -1,5 +1,6 @@
-package com.my.blog.domain.Member;
+package com.my.blog.domain.Member.domain.vo;
 
+import com.my.blog.domain.Member.dto.MemberCount;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -56,4 +57,5 @@ public class Member {
         this.leaveTime = leaveTime;
         this.memberCount = memberCount;
     }
+
 }

@@ -1,4 +1,4 @@
-package com.my.blog.domain.Member;
+package com.my.blog.domain.Member.dto;
 
 import lombok.Builder;
 import lombok.Getter;
