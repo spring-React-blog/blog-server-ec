@@ -1,4 +1,4 @@
-package com.my.blog.global.util;
+package com.my.blog.global.entity;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

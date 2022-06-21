@@ -38,7 +38,7 @@ class MemberServiceTest {
                 .userName("USERNAME")
                 .build();
         Member insertMember = memberRepository.save(member);
-        Optional<Member> findMember = memberRepository.findById(insertMember.getId());
+        Optional<Member> findMember = memberRepository.findById(insertMember.getUserId());
         Member result = findMember.ofNullable(insertMember).orElseThrow();
         assertEquals(insertMember, result);
     }

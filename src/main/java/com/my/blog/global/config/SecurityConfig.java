@@ -1,9 +1,9 @@
 package com.my.blog.global.config;
 
-import com.my.blog.global.jwt.JwtAccessDeniedHandler;
-import com.my.blog.global.jwt.JwtAuthenticationEntryPoint;
-import com.my.blog.global.jwt.JwtSecurityConfig;
-import com.my.blog.global.jwt.TokenProvider;
+import com.my.blog.global.jwt.config.JwtAccessDeniedHandler;
+import com.my.blog.global.jwt.config.JwtAuthenticationEntryPoint;
+import com.my.blog.global.jwt.config.JwtSecurityConfig;
+import com.my.blog.global.jwt.config.TokenProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

@@ -1,6 +1,7 @@
 package com.my.blog.domain.Member.domain.vo;
 
 import com.my.blog.domain.Member.dto.MemberCount;
+import com.my.blog.global.jwt.entity.Authority;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,6 +9,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.Set;
 
 @Getter
 @NoArgsConstructor
@@ -15,8 +17,9 @@ import java.util.Date;
 @Table(name = "Members")
 public class Member {
     @Id
+    @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long userId;
 
     @Column(name = "email")
     private String userEmail;
@@ -44,6 +47,13 @@ public class Member {
     @JoinColumn(name = "MemberCounts")
     private MemberCount memberCount;
 
+
+    @ManyToMany
+    @JoinTable(
+            name = "member_authority",
+            joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "authority_name", referencedColumnName = "authority_name")})
+    private Set<Authority> authorities;
 
     @Builder
     public Member(String userEmail, String userPassword, String userName, String userNickname,
