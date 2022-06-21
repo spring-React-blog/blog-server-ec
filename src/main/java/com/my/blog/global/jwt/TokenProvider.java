@@ -1,4 +1,4 @@
-package com.my.blog.global.config.jwt;
+package com.my.blog.global.jwt;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
