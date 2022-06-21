@@ -1,4 +1,4 @@
-package com.my.blog.global.jwt;
+package com.my.blog.global.jwt.config;
 
 import org.springframework.security.config.annotation.SecurityConfigurer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

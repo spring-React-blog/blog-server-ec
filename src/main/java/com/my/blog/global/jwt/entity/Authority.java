@@ -1,4 +1,4 @@
-package com.my.blog.global.entity;
+package com.my.blog.global.jwt.entity;
 
 import lombok.*;
 

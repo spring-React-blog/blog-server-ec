@@ -1,4 +1,4 @@
-package com.my.blog.global.jwt;
+package com.my.blog.global.jwt.config;
 
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
